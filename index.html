@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boron</title>
+</head>
+<body>
+    
+    <input type="text" id="n">
+    <input type="text" id="min">
+    <input type="text" id="max">
+    <button id="but" onclick="gen()"> Generuj </button>
+    <div id="temp"></div>
+
+    <script>
+        const inp_n = document.getElementById("n");
+        const inp_min = document.getElementById("min");
+        const inp_max = document.getElementById("max");
+
+
+        function gen() {
+            const n = parseInt(inp_n.value);
+            const min = parseInt(inp_min.value);
+            const max = parseInt(inp_max.value);
+
+            const temp = document.getElementById("temp");
+            temp.remove();
+
+            for (let i = 0; i < n; i++) {
+                //console.log(i, min+Math.floor(Math.random()*(max-min+1)));
+                const new_temp = temp.cloneNode();
+                new_temp.innerHTML = `${i+1}: ${min+Math.floor(Math.random()*(max-min+1))}`;
+                new_temp.id = i;
+                document.body.appendChild(new_temp);
+            }
+
+        }
+    </script>
+</body>
+</html>
