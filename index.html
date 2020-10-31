@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boron</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Ubuntu', sans-serif;
+            
+        }
+
+        #n, #min, #max {
+            margin: 15px;
+        }
+
+    </style>
 </head>
 <body>
     
+    <label for="n"> Podaj liczbę osób: </label>
     <input type="text" id="n">
+    <br>
+    <label for="min"> Podaj zakres plusów: </label>
     <input type="text" id="min">
     <input type="text" id="max">
+    <br>
     <button id="but" onclick="gen()"> Generuj </button>
     <div id="temp"></div>
 
